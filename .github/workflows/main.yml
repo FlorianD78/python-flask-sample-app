@@ -1,0 +1,13 @@
+name: Install TASK on Ubuntu
+on:
+  push:
+    branches:
+      - main
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    container: docker:dind
+    steps:
+      - name: Lint repository with Ruff
+        run:  | 
+          docker run -v .:/io --rm ghcr.io/astral-sh/ruff check .
