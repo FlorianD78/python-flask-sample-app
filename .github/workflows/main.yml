@@ -1,4 +1,4 @@
-name: Install TASK on Ubuntu
+name: CI Pipeline
 on:
   push:
     branches:
